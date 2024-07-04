@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "API_Demo\\Dockerfile",
               "ToolTip": "C:\\Proyectos\\JenkinsTest\\TestJenkins\\API_Demo\\Dockerfile",
               "RelativeToolTip": "API_Demo\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-07-04T23:36:31.058Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "RelativeToolTip": "API_Demo\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-04T23:04:42.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T23:04:42.526Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "API_Demo\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-04T23:04:37.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T23:04:37.403Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "API_Demo\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T23:03:40.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T23:03:40.667Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "API_Demo\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T18:32:42.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T18:32:42.832Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "API_Demo\\WeatherForecast.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAxwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T18:32:24.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T18:32:24.802Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "Unitarias\\WatherForecastTest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T18:31:15.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T18:31:15.469Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "Unitarias\\UnitTest1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T18:30:19.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T18:30:19.683Z"
             }
           ]
         }
