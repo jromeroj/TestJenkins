@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Proyectos\\JenkinsTest\\API_Demo\\API_Demo\\API_Demo.csproj": {}
+    "C:\\Proyectos\\JenkinsTest\\TestJenkins\\API_Demo\\API_Demo.csproj": {}
   },
   "projects": {
-    "C:\\Proyectos\\JenkinsTest\\API_Demo\\API_Demo\\API_Demo.csproj": {
+    "C:\\Proyectos\\JenkinsTest\\TestJenkins\\API_Demo\\API_Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\JenkinsTest\\API_Demo\\API_Demo\\API_Demo.csproj",
+        "projectUniqueName": "C:\\Proyectos\\JenkinsTest\\TestJenkins\\API_Demo\\API_Demo.csproj",
         "projectName": "API_Demo",
-        "projectPath": "C:\\Proyectos\\JenkinsTest\\API_Demo\\API_Demo\\API_Demo.csproj",
+        "projectPath": "C:\\Proyectos\\JenkinsTest\\TestJenkins\\API_Demo\\API_Demo.csproj",
         "packagesPath": "C:\\Users\\jonat\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\JenkinsTest\\API_Demo\\API_Demo\\obj\\",
+        "outputPath": "C:\\Proyectos\\JenkinsTest\\TestJenkins\\API_Demo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
