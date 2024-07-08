@@ -15,7 +15,7 @@ RUN dotnet publish -c Release -o out
 
 #FROM mcr.microsoft.com/dotnet/aspnet::8.0. AS runtime-env 
 WORKDIR /webapp
-COPY --from=build /webapp/out .
+COPY --from=build-env /webapp/out .
 ENTRYPOINT ["dotnet", "API_Demo.dll"]
 
 
