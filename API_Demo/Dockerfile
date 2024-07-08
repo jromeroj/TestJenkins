@@ -1,23 +1,28 @@
-FROM mcr.microsoft.com/dotnet/sdk as build
+###########################################
+####### Prepara la imagen de Docker #######
+###########################################
+FROM mcr.microsoft.com/dotnet/sdk AS build-env
+#Worker Directory
 WORKDIR webapp
-EXPOSE 80
-EXPOSE 7019
-EXPOSE 5211
-##### Copia los archivos del proyecto #####
-#COPY ./*.csproj ./
-#RUN dotnet restore
-COPY ./bin/Release/net8.0/API_Demo.dll ./
+COPY ./*.csproj ./
 RUN dotnet restore
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-#### Copia todo lo demas ####
-COPY . .
-#RUN dotnet publish - c Release -o out
+##################################
+##### Build Image for Docker #####
+##################################
 
-##### Build Image ####
-#FROM mcr.microsoft.com/dotnet/sdk
-#WORKDIR /webapp
-##COPY --from=build /webapp/out .
-#COPY --from=build /webapp/bin/Release/net8.0 .
-#ENTRYPOINT ["dotnet", "API_Demo.dll"]
+#FROM mcr.microsoft.com/dotnet/sdk AS runtime-env
+WORKDIR /webapp
+COPY --from=build /webapp/out .
+ENTRYPOINT ["dotnet", "API_Demo.dll"]
+
+
+
+
+#EXPOSE 80
+#EXPOSE 7019
+#EXPOSE 5211
 
 
