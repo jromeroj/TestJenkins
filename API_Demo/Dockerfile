@@ -1,7 +1,7 @@
 ###########################################
 ####### Prepara la imagen de Docker #######
 ###########################################
-FROM mcr.microsoft.com/dotnet/aspnet:lasted 
+FROM mcr.microsoft.com/dotnet/aspnet:8.0. AS build-env 
 #Worker Directory
 WORKDIR webapp
 COPY ./*.csproj ./
@@ -13,7 +13,7 @@ RUN dotnet publish -c Release -o out
 ##### Build Image for Docker #####
 ##################################
 
-#FROM mcr.microsoft.com/dotnet/aspnet:lasted
+#FROM mcr.microsoft.com/dotnet/aspnet::8.0. AS runtime-env 
 WORKDIR /webapp
 COPY --from=build /webapp/out .
 ENTRYPOINT ["dotnet", "API_Demo.dll"]
