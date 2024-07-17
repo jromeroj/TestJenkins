@@ -18,4 +18,4 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 
 #set entry point 
-ENTRYPOINT ["dotnet", "yourapp.dll"]
+ENTRYPOINT ["dotnet", "API_Demo.dll"]

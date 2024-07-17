@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GYS5ECzs7gxR1wG9gBQCNltVh5qTqIqz7YQWdyV3pBWu+YngQXUT1okrcofewZAivj+bVJUo/ojHWNINXyeOwA==",
+  "dgSpecHash": "0k9f8hbNZE4=",
   "success": true,
-  "projectFilePath": "C:\\Proyectos\\JenkinsTest\\TestJenkins\\Unitarias\\Unitarias.csproj",
+  "projectFilePath": "C:\\Projects\\TestJenkins\\Unitarias\\Unitarias.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jonat\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
