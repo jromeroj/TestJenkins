@@ -10,12 +10,13 @@ RUN dotnet restore
 
 #Copy the remainign files and build the application
 COPY . ./
-RUN dotnet publish -c Release -o out
+#RUN dotnet publish -c Release -o out
 
 #Build the runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime-env
 WORKDIR /app
-COPY --from=build-env /app/out .
+#COPY --from=build-env /app/out .
+COPY --from=build-env /app/bin/Release .
 
 #set entry point 
 ENTRYPOINT ["dotnet", "API_Demo.dll"]
