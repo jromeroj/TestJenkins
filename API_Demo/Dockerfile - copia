@@ -47,3 +47,67 @@ ENTRYPOINT ["dotnet", "API_Demo.dll"]
 
 #Asignacion de entry Point
 #ENTRYPOINT ["dotnet", "API_Demo.dll"]
+
+
+
+
+
+
+######>>> Jenkins File
+pipeline {
+    agent any
+    
+    stages
+    {
+        stage ('Git Checkout') {
+          steps {
+              //git branch: '<your-brach>', credentialsId: '<id-of-Jenkins-credentials>', url: '<url to your GitHub repository'
+              git branch: 'main', url: 'https://github.com/jromeroj/TestJenkins.git'
+            }
+          }
+            stage('Build with dotNet'){
+                steps{
+                    sh 'dotnet publish --configuration release'
+                }
+            }
+            stage('Remove old container') {
+            steps {
+                    script {
+                        // Detener y eliminar el contenedor viejo
+                        sh """
+                            if [ \$(docker ps -q -f name=$webName) ]; then
+                                docker stop $webName
+                                docker rm $webName
+                            fi
+                        """
+                    }
+                }
+            }
+           
+            stage('Build new Docker image') {
+                steps {
+                    script {
+                        // Construir la nueva imagen Docker
+                        sh "docker build -t $imageName ."
+                    }
+                }
+            }
+            stage('Deploy new container') {
+                steps {
+                    script {
+                        // Desplegar el nuevo contenedor
+                        sh "docker run -d -p 5211:5211 --name $webName $imageName"
+                    }
+                }
+            }
+    }
+    post {
+        always {
+            script {
+                // Limpiar imágenes dangling (sin etiquetas)
+                sh "docker image prune -f"
+            }
+        }
+    }
+}
+
