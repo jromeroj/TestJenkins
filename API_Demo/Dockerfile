@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
-COPY ./app/bin/Release/net8.0 ./
+COPY ./app/bin/Release/net8.0/ ./
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime-env
 WORKDIR /app
 COPY --from=build-env /app/bin/Release/net8.0/ .
