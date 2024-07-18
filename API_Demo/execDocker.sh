@@ -1,3 +1,3 @@
-#!/bin/bash
-sudo su <<R0m3r081
-docker build -t apinettest .
+#!/jenkins/bin/bash
+echo "$upass" | sudo -S sleep 100 && sudo su
+docker build -t $imageName .
