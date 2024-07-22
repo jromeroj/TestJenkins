@@ -7,7 +7,7 @@ COPY . ./
 #restaurar las capas
 RUN dotnet restore
 #Publica la solución
-RUN publish -c Release -o out
+RUN dotnet publish -c Release -o out
 
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 
