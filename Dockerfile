@@ -1,17 +1,20 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
+EXPOSE 80
+EXPOSE 443
 
-#COPY *.sln ./
-#Copiar todo 
-COPY . ./
-#restaurar las capas
-RUN dotnet restore
-#Publica la solución
-RUN dotnet publish -c Release -o out
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["API_Demo.csproj", "."]
+RUN dotnet restore "./API_Demo.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet build "API_Demo.csproj" -c Release -o /app/build
 
+FROM build AS publish
+RUN dotnet publish "API_Demo.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 
+FROM base AS final
 WORKDIR /app
-#COPY --from=build-env /app/API_Demo/bin/Release/net8.0/*.* .
-COPY --from=build-env /app/out .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "API_Demo.dll"]
